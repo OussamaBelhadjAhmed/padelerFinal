@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="765.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.listTournoisController">
+    <children>
+        <TableView fx:id="table_tournois" layoutX="190.0" layoutY="157.0" prefHeight="419.0" prefWidth="546.0">
+            <columns>
+                <TableColumn fx:id="col_name" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="col_type" prefWidth="113.0" text="Type" />
+                <TableColumn fx:id="col_dateDebut" text="Start Date" />
+                <TableColumn fx:id="col_dateFin" prefWidth="82.0" text="End date" />
+                <TableColumn fx:id="editCol" prefWidth="120.0" text="Inscription" />
+            </columns>
+        </TableView>
+        <AnchorPane prefHeight="600.0" prefWidth="167.0" style="-fx-background-color: #A6AEDE;">
+            <children>
+                <Label layoutX="34.0" layoutY="195.0" text="Your" textFill="WHITE">
+                    <font>
+                        <Font size="48.0" />
+                    </font>
+                </Label>
+                <Label layoutX="32.0" layoutY="265.0" text="only" textFill="WHITE">
+                    <font>
+                        <Font size="48.0" />
+                    </font>
+                </Label>
+                <Label layoutX="31.0" layoutY="339.0" text="limit" textFill="WHITE">
+                    <font>
+                        <Font size="48.0" />
+                    </font>
+                </Label>
+                <Label layoutX="61.0" layoutY="409.0" text="is" textFill="WHITE">
+                    <font>
+                        <Font size="48.0" />
+                    </font>
+                </Label>
+                <Label layoutX="37.0" layoutY="479.0" text="you" textFill="WHITE">
+                    <font>
+                        <Font size="48.0" />
+                    </font>
+                </Label>
+            <ImageView fitHeight="106.0" fitWidth="143.0" layoutX="31.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/images/logo.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+      <Label layoutX="190.0" layoutY="56.0" prefHeight="53.0" prefWidth="523.0" text="List of tournaments available" textFill="#a6aede">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+    </children>
+
+</AnchorPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.reclamation.UserReclamationController">
+   <children>
+      <TableView fx:id="table_view" layoutX="7.0" layoutY="209.0" prefHeight="449.0" prefWidth="805.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="95.0" text="id Reclamation" />
+          <TableColumn fx:id="col_idU" prefWidth="83.0" text="Id User" />
+            <TableColumn fx:id="col_Email" prefWidth="61.0" text="Email" />
+            <TableColumn fx:id="col_date" prefWidth="126.0" text="Date Reclamation" />
+            <TableColumn fx:id="description" prefWidth="115.0" text="Description" />
+            <TableColumn fx:id="col_Statut" prefWidth="106.0" text="Statut" />
+            <TableColumn fx:id="col_Action" prefWidth="107.0" text="Action" />
+            <TableColumn fx:id="col_Categorie" prefWidth="107.0" text="Categorie" />
+        </columns>
+      </TableView>
+      <Pane prefHeight="150.0" prefWidth="819.0" style="-fx-background-color: #2A639B;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/images/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="209.0" layoutY="19.0" text="Reclamation" textFill="WHITE">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ComboBox fx:id="categoryComboBox" layoutX="664.0" layoutY="150.0" prefWidth="150.0" />
+      <Label layoutX="567.0" layoutY="150.0" prefHeight="17.0" prefWidth="91.0" text="Categories:" textFill="#2a639b">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

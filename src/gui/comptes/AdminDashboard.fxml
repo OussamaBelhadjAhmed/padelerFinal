@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.comptes.AdminDashboardController">
+    <children>
+        <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <BorderPane prefHeight="600.0" prefWidth="1100.0">
+                    <top>
+                        <AnchorPane prefHeight="45.0" prefWidth="1100.0" styleClass="semi-top-form" stylesheets="@DashboardDesign.css" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane prefHeight="35.0" prefWidth="1300.0" styleClass="top-form" stylesheets="@DashboardDesign.css">
+                                    <children>
+
+                                        <Label layoutX="45.0" layoutY="9.0" text="Padler">
+                                            <font>
+                                                <Font name="Tahoma" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Button fx:id="close" layoutX="1060.0" layoutY="6.0" mnemonicParsing="false" onAction="#close" prefHeight="24.0" prefWidth="53.0" styleClass="close" stylesheets="@DashboardDesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                            <graphic>
+
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="minimize" layoutX="984.0" layoutY="2.0" mnemonicParsing="false" onAction="#minimize" prefHeight="24.0" prefWidth="53.0" styleClass="minimize" stylesheets="@DashboardDesign.css">
+                                            <graphic>
+
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <left>
+                        <AnchorPane prefHeight="555.0" prefWidth="211.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane layoutX="6.0" layoutY="112.0" prefHeight="555.0" prefWidth="211.0" styleClass="nav-form" stylesheets="@DashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Label layoutX="72.0" layoutY="109.0" text="Welcome" textFill="#f2f2f2">
+                                            <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="username" alignment="CENTER" layoutX="17.0" layoutY="142.0" prefHeight="21.0" prefWidth="184.0" textFill="#6ae8b8">
+                                            <font>
+                                                <Font name="Arial Bold" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Line endX="67.66665649414062" layoutX="118.0" layoutY="186.0" startX="-93.0" stroke="WHITE" />
+                                        <Button fx:id="g_tournois" layoutX="15.0" layoutY="242.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@DashboardDesign.css" text="Manage tournaments">
+                                        </Button>
+                                        <Button fx:id="g_reclamation" layoutX="15.0" layoutY="278.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@DashboardDesign.css" text="Manage complaints" />
+                                        <Button fx:id="g_demandes" layoutX="15.0" layoutY="314.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@DashboardDesign.css" text="Material requests" />
+                                        <Button fx:id="g_materiel" layoutX="15.0" layoutY="353.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@DashboardDesign.css" text="Manage Materiels" />
+                                        <Button fx:id="g_club" layoutX="15.0" layoutY="392.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@DashboardDesign.css" text="Manage Club" />
+                                        <Button fx:id="g_terrain" layoutX="15.0" layoutY="431.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@DashboardDesign.css" text="Manage Terrain" />
+                                        <Button fx:id="g_dispo" layoutX="15.0" layoutY="470.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@DashboardDesign.css" text="Manage Land Availability" />
+                                        <Button fx:id="g_publication" layoutX="15.0" layoutY="509.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@DashboardDesign.css" text="Manage Publication" />
+
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </left>
+                    <center>
+                        <AnchorPane fx:id="layout" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

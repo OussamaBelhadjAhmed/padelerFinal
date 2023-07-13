@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="388.0" prefWidth="401.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.reservation.AddNewDateController">
+  <stylesheets>
+        <URL value="@addnewdate.css" />
+    </stylesheets>  
+    <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="65.0" prefWidth="402.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Reserve Terrain">
+               <font>
+                  <Font name="Bauhaus 93" size="40.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date :" wrappingWidth="136.53674697875977">
+               <font>
+                  <Font name="Century Gothic" size="19.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Text>
+            <DatePicker fx:id="choiceDate" />
+         </children>
+         <VBox.margin>
+            <Insets left="10.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox layoutX="50.0" layoutY="149.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club :" wrappingWidth="136.53674697875977">
+               <font>
+                  <Font name="Century Gothic" size="19.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Text>
+            <ChoiceBox fx:id="selectedClub" prefWidth="150.0" style="-fx-background-radius: 8px;" />
+         </children>
+         <VBox.margin>
+            <Insets left="10.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Terrain" wrappingWidth="136.53674697875977">
+               <font>
+                  <Font name="Century Gothic" size="19.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Text>
+            <ChoiceBox fx:id="selectedTerrain" prefWidth="150.0" style="-fx-background-radius: 8px;" />
+         </children>
+         <opaqueInsets>
+            <Insets top="15.0" />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets left="10.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="71.0" prefWidth="402.0">
+         <VBox.margin>
+            <Insets top="100.0" />
+         </VBox.margin>
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#addDisponibiliteTerrain" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #327252; -fx-background-radius: 8px; -fx-text-fill: #fff; -fx-cursor: hand;" text="Ajouter" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Bauhaus 93" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="141.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#clean" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #86253f; -fx-background-radius: 8px; -fx-text-fill: #fff; -fx-cursor: hand;" text="Effacer" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Bauhaus 93" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

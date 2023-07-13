@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="878.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.terrain.TableViewTerrainController">
+    <stylesheets>
+        <URL value="@tableviewterrain.css" />
+    </stylesheets>
+ <children>
+      <Pane layoutY="61.0" prefHeight="3.0" prefWidth="609.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <TableView fx:id="terrainsTable" layoutX="26.0" layoutY="160.0" prefHeight="320.0" prefWidth="762.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="150.0">
+        <columns>
+          <TableColumn fx:id="idTerrain" maxWidth="60.0" prefWidth="60.0" style="-fx-alignment: center;" text="ID" />
+          <TableColumn fx:id="name" maxWidth="207.9999237060547" prefWidth="207.9999237060547" style="-fx-alignment: center;" text="Name" />
+            <TableColumn fx:id="status" maxWidth="338.39996337890625" minWidth="7.99993896484375" prefWidth="85.60003662109375" style="-fx-alignment: center;" text="Status" />
+            <TableColumn fx:id="clubName" maxWidth="413.6001281738281" prefWidth="294.4000549316406" style="-fx-alignment: center;" text="Club Name" />
+            <TableColumn fx:id="editTerrain" maxWidth="386.4000549316406" prefWidth="126.4000244140625" style="-fx-alignment: center;" text="Editer" />
+        </columns>
+      </TableView>
+      <Text layoutX="26.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Terrains">
+         <font>
+            <Font name="Bauhaus 93" size="47.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER" layoutX="580.0" layoutY="14.714285850524902" />
+      <FontAwesomeIconView glyphName="CLOSE" layoutX="580.0" layoutY="21.0" onMouseClicked="#close" size="15" text="" wrappingWidth="26.985787391662598" AnchorPane.rightAnchor="-6.985787391662598" AnchorPane.topAnchor="7.0" />
+      <HBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="73.0" prefHeight="67.0" prefWidth="200.0">
+         <children>
+            <FontAwesomeIconView fill="#2196f3" glyphName="PLUS_SQUARE" onMouseClicked="#getAddViewTerrain" size="40" text="">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#00e676" glyphName="REFRESH" layoutX="10.0" layoutY="58.0" onMouseClicked="#refreshTerrainTable" size="40" text="">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="RED" glyphName="PRINT" layoutX="44.0" layoutY="58.0" onMouseClicked="#print" size="40" text="" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="525.0" layoutY="73.0" prefHeight="67.0" prefWidth="305.0" AnchorPane.rightAnchor="15.0">
+         <children>
+            <ChoiceBox fx:id="nomClubInterface" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="169.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ChoiceBox>
+            <Button mnemonicParsing="false" onMouseClicked="#getByClubName" prefHeight="26.0" prefWidth="82.0" text="Chercher">
+               <HBox.margin>
+                  <Insets left="35.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

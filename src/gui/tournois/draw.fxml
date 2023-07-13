@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane prefHeight="400.0" prefWidth="895.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.tournois.DrawController">
+   <children>
+      <TextField fx:id="first_phase_1" layoutX="22.0" layoutY="132.0" style="-fx-background-color: #5c677d;" />
+      <TextField fx:id="first_phase_2" layoutX="22.0" layoutY="172.0" style="-fx-background-color: #5c677d;" />
+      <TextField fx:id="first_phase_3" layoutX="22.0" layoutY="220.0" style="-fx-background-color: #5c677d;" />
+      <TextField fx:id="first_phase_4" layoutX="22.0" layoutY="260.0" style="-fx-background-color: #5c677d;" />
+      <TextField fx:id="second_phase_1" layoutX="251.0" layoutY="152.0" style="-fx-background-color: #5c677d;" />
+      <TextField fx:id="second_phase_2" layoutX="251.0" layoutY="238.0" style="-fx-background-color: #5c677d;" />
+      <TextField fx:id="final_phase" layoutX="480.0" layoutY="194.0" style="-fx-background-color: #5c677d;" />
+      <Line endX="-108.0" endY="-0.5" layoutX="322.0" layoutY="145.0" startX="-151.0" startY="-0.5" />
+      <Line endX="-108.0" endY="-0.5" layoutX="322.0" layoutY="185.0" startX="-151.0" startY="-0.5" />
+      <Line endX="-117.5" endY="-11.0" layoutX="332.0" layoutY="195.0" startX="-117.5" startY="-50.0" />
+      <Line endX="-154.0" endY="-43.0" layoutX="370.0" layoutY="207.0" startX="-120.0" startY="-43.0" />
+      <Line endX="-108.0" endY="-0.5" layoutX="322.0" layoutY="232.0" startX="-151.0" startY="-0.5" />
+      <Line endX="-108.0" endY="-0.5" layoutX="322.0" layoutY="272.0" startX="-151.0" startY="-0.5" />
+      <Line endX="-117.5" endY="-11.0" layoutX="332.0" layoutY="282.0" startX="-117.5" startY="-50.0" />
+      <Line endX="-154.0" endY="-43.0" layoutX="370.0" layoutY="294.0" startX="-120.0" startY="-43.0" />
+      <Line endX="-108.0" endY="-0.5" layoutX="552.0" layoutY="164.0" startX="-151.0" startY="-0.5" />
+      <Line endX="-108.0" endY="-0.5" layoutX="552.0" layoutY="250.0" startX="-151.0" startY="-0.5" />
+      <Line endX="-117.5" endY="35.0" layoutX="562.0" layoutY="214.0" startX="-117.5" startY="-50.0" />
+      <Line endX="-154.0" endY="-43.0" layoutX="599.0" layoutY="249.0" startX="-120.0" startY="-43.0" />
+   </children>
+</AnchorPane>

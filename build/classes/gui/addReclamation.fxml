@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="549.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.reclamation.AddReclamationController">
+   <children>
+      <Pane prefHeight="132.0" prefWidth="702.0" style="-fx-background-color: #2A639B;" AnchorPane.bottomAnchor="421.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="143.0" fitWidth="147.0" layoutX="-8.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../padelerProject/src/resources/images/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="195.0" layoutY="24.0" prefHeight="84.0" prefWidth="425.0" text="Ou vous pouvez nous envoyer un message, nous vous répondons rapidement." textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextArea fx:id="Description" layoutX="298.0" layoutY="177.0" prefHeight="213.0" prefWidth="358.0" promptText="Descritpion" AnchorPane.topAnchor="177.0" />
+      <Button fx:id="BTN_create" layoutX="598.0" layoutY="409.0" mnemonicParsing="false" text="Envoyer" />
+      <Pane layoutY="446.0" prefHeight="107.0" prefWidth="702.0" style="-fx-background-color: #2A639B;">
+         <children>
+            <Label layoutX="311.0" layoutY="-1.0" text="CONTACT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="326.0" layoutY="40.0" text="Adresse: Tunis" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label layoutX="326.0" layoutY="67.0" text="Email: contact@padeler.tn" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <Label layoutX="30.0" layoutY="264.0" prefHeight="25.0" prefWidth="70.0" text="Catégorie:" />
+      <ChoiceBox fx:id="selectedCategorie" layoutX="109.0" layoutY="264.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

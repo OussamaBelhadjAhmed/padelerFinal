@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.layout.StackPane?>
+<AnchorPane id="AnchorPane" prefHeight="800" prefWidth="1063.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="gui.comptes.UserDashboardController">
+    <children>
+        <AnchorPane fx:id="navbar" prefHeight="88.0" prefWidth="1063.0" style="-fx-background-color: #1381b5;">
+            <children>
+                <Button onAction="#switchForm" fx:id="g_publication" layoutX="30.0" layoutY="18.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="104.0" style="-fx-background-color: transparent;" text="Home">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="HOME" size="20" />
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Button onAction="#switchForm" fx:id="g_tournois" layoutX="148.0" layoutY="18.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="164.0" style="-fx-background-color: transparent;" text="Tournaments">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="TROPHY" size="20" />
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Button onAction="#switchForm" fx:id="g_materiel" layoutX="318.0" layoutY="18.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="164.0" style="-fx-background-color: transparent;" text="Equipments">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <graphic>
+                        <MaterialDesignIconView glyphName="TENNIS" size="20" text="" wrappingWidth="22.999993801116943" />
+                    </graphic>
+                </Button>
+                <Button onAction="#switchForm" fx:id="g_reservation" layoutX="482.0" layoutY="18.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="156.0" style="-fx-background-color: transparent;" text="Reservation">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <graphic>
+                        <MaterialDesignIconView glyphName="PEN" size="20" />
+                    </graphic>
+                </Button>
+                <Button  onAction="#switchForm" fx:id="g_club" layoutX="659.0" layoutY="18.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="156.0" style="-fx-background-color: transparent;" text="Clubs">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="CALENDAR" size="20" />
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="g_reclamation" onAction="#switchForm" layoutX="835.0" layoutY="18.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="104.0" style="-fx-background-color: transparent;" text="Claims">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font><graphic>
+                        <MaterialDesignIconView glyphName="MESSAGE" size="20" />
+                    </graphic>
+                </Button>
+
+                <MaterialDesignIconView onMouseClicked="#logout" fx:id="logout" glyphName="LOGOUT" layoutX="1001.0" layoutY="52.0" size="40" wrappingWidth="47.99999380111694" />
+            </children>
+        </AnchorPane>
+        <StackPane fx:id="contentPane" layoutY="88.0" prefHeight="611.0" prefWidth="1063.0">
+
+        </StackPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.materiel.ListdesdemandesController">
+    <children>
+        <Text layoutX="30.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des Demandes " wrappingWidth="450.0">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Text>
+        <Button fx:id="rafraichir" layoutX="30.0" layoutY="57.0" mnemonicParsing="false" text="Rafraichir" onAction="#refreshData" />
+        <TableView fx:id="demandetableau" layoutX="14.0" layoutY="99.0" prefHeight="279.0" prefWidth="1000.0">
+            <columns>
+                <TableColumn fx:id="idUserMateriel" prefWidth="129.0" text="idUserMateriel" />
+                <TableColumn fx:id="idUser" prefWidth="200.0" text="User" />
+                <TableColumn fx:id="idMateriel" prefWidth="200.0" text="Materiel" />
+                <TableColumn fx:id="dateDebut" prefWidth="150.0" text="Date Debut" />
+                <TableColumn fx:id="dateFin" prefWidth="150.0" text="Date Fin" />
+                <TableColumn fx:id="approve" prefWidth="120.0" text="Status" />
+            </columns>
+        </TableView>
+        <Button fx:id="approved" layoutX="389.0" layoutY="57.0" mnemonicParsing="false" text="Approve" onAction="#setApproved" />
+        <Button fx:id="disapprove" layoutX="473.0" layoutY="57.0" mnemonicParsing="false" text="Disapprove" onAction="#setDisapprove" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.reservation.ReservationtionUserController">
+    <stylesheets>
+        <URL value="@reservationtionuser.css" />
+    </stylesheets>
+    <children>
+      <Pane layoutY="61.0" prefHeight="3.0" prefWidth="609.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <TableView fx:id="clubsTable" layoutX="26.0" layoutY="151.0" prefHeight="282.0" prefWidth="672.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="150.0">
+        <columns>
+          <TableColumn fx:id="club" maxWidth="136.80001068115234" prefWidth="136.80001068115234" style="-fx-alignment: center;" text="Club" />
+            <TableColumn fx:id="terrain" maxWidth="338.39996337890625" prefWidth="128.0" style="-fx-alignment: center;" text="Terrain" />
+            <TableColumn fx:id="date" maxWidth="318.3999938964844" prefWidth="140.0" style="-fx-alignment: center;" text="Date " />
+            <TableColumn fx:id="time" maxWidth="338.39996337890625" prefWidth="91.20001220703125" style="-fx-alignment: center;" text="Time" />
+            <TableColumn fx:id="editClub" maxWidth="366.4000549316406" prefWidth="83.20004272460938" style="-fx-alignment: center;" text="Imprimer" />
+        </columns>
+      </TableView>
+      <Text layoutX="26.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reservations">
+         <font>
+            <Font name="Bauhaus 93" size="47.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER" layoutX="580.0" layoutY="14.714285850524902" />
+      <HBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="73.0" prefHeight="67.0" prefWidth="200.0">
+         <children>
+            <FontAwesomeIconView fill="#327252" glyphName="REFRESH" layoutX="10.0" layoutY="58.0" onMouseClicked="#refreshClubTable" size="40" text="">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

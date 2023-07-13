@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="754.0" prefWidth="948.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.terrain.ManageDisponibiliteTerrainController">
+    <stylesheets>
+        <URL value="@managedisponibiliteterrain.css" />
+    </stylesheets><children>
+      <Pane layoutY="61.0" prefHeight="3.0" prefWidth="609.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <TableView fx:id="terrainsTable" layoutX="14.0" layoutY="146.0" prefHeight="320.0" prefWidth="762.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="146.0">
+        <columns>
+          <TableColumn fx:id="dateAffichage" maxWidth="207.9999237060547" prefWidth="95.20001220703125" style="-fx-alignment: center;" text="Date" />
+            <TableColumn fx:id="nomTerrain" maxWidth="207.9999237060547" prefWidth="115.20001220703125" style="-fx-alignment: center;" text="Nom terrain" />
+            <TableColumn fx:id="tmp1" maxWidth="338.39996337890625" minWidth="0.0" prefWidth="43.20001220703125" style="-fx-alignment: center;" text="06:30h" />
+            <TableColumn fx:id="tmp2" maxWidth="413.6001281738281" minWidth="0.0" prefWidth="56.79998779296875" style="-fx-alignment: center;" text="08:00h" />
+            <TableColumn fx:id="tmp3" maxWidth="414.4000549316406" minWidth="0.0" prefWidth="52.79998779296875" style="-fx-alignment: center;" text="09:30h" />
+            <TableColumn fx:id="tmp4" maxWidth="603.2000427246094" minWidth="0.0" prefWidth="51.199951171875" style="-fx-alignment: center;" text="11:00h" />
+            <TableColumn fx:id="tmp5" maxWidth="603.2000427246094" minWidth="0.0" prefWidth="44.800048828125" style="-fx-alignment: center;" text="12:30h" />
+            <TableColumn fx:id="tmp6" maxWidth="603.2000427246094" minWidth="0.0" prefWidth="48.800048828125" style="-fx-alignment: center;" text="14:00h" />
+            <TableColumn fx:id="tmp7" maxWidth="603.2000427246094" minWidth="0.0" prefWidth="49.5999755859375" style="-fx-alignment: center;" text="15:30h" />
+            <TableColumn fx:id="tmp8" maxWidth="603.2000427246094" minWidth="0.0" prefWidth="53.5999755859375" style="-fx-alignment: center;" text="17:00h" />
+            <TableColumn fx:id="tmp9" maxWidth="603.2000427246094" minWidth="0.0" prefWidth="52.800048828125" style="-fx-alignment: center;" text="18:30h" />
+            <TableColumn fx:id="tmp10" maxWidth="603.2000427246094" minWidth="0.0" prefWidth="49.60003662109375" style="-fx-alignment: center;" text="20:00h" />
+            <TableColumn fx:id="tmp11" maxWidth="603.2000427246094" minWidth="0.0" prefWidth="46.4000244140625" style="-fx-alignment: center;" text="21:30h" />
+            <TableColumn fx:id="tmp12" maxWidth="603.2000427246094" minWidth="0.0" prefWidth="45.5999755859375" style="-fx-alignment: center;" text="23:00h" />
+            <TableColumn fx:id="tmp13" maxWidth="603.2000427246094" minWidth="0.0" prefWidth="52.0" style="-fx-alignment: center;" text="00:30h" />
+            <TableColumn fx:id="tmp14" maxWidth="603.2000427246094" minWidth="0.0" prefWidth="73.60009765625" style="-fx-alignment: center;" text="02:00h" />
+        </columns>
+      </TableView>
+      <Text layoutX="26.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Disponibilité des terrains">
+         <font>
+            <Font name="Bauhaus 93" size="36.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER" layoutX="580.0" layoutY="14.714285850524902" />
+      <FontAwesomeIconView glyphName="CLOSE" layoutX="580.0" layoutY="21.0" onMouseClicked="#close" size="15" text="" wrappingWidth="26.985787391662598" AnchorPane.rightAnchor="-6.985787391662598" AnchorPane.topAnchor="7.0" />
+      <HBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="73.0" prefHeight="67.0" prefWidth="200.0">
+         <children>
+            <FontAwesomeIconView fill="#2196f3" glyphName="PLUS_SQUARE" onMouseClicked="#getAddViewTerrain" size="40" text="">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#00e676" glyphName="REFRESH" layoutX="10.0" layoutY="58.0" onMouseClicked="#refreshTerrainTable" size="40" text="">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="RED" glyphName="PRINT" layoutX="44.0" layoutY="58.0" onMouseClicked="#print" size="40" text="" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="525.0" layoutY="73.0" prefHeight="67.0" prefWidth="499.0" AnchorPane.rightAnchor="15.0">
+         <children>
+            <ChoiceBox fx:id="nomClubInterface" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="169.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ChoiceBox>
+            <ChoiceBox fx:id="nomTerrainInterface" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="169.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </ChoiceBox>
+            <Button mnemonicParsing="false" onMouseClicked="#getByClubName" prefHeight="26.0" prefWidth="82.0" text="Chercher">
+               <HBox.margin>
+                  <Insets left="35.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.publication.ListPublicationController">
+    <stylesheets>
+        <URL value="@ListPublication.css" />
+    </stylesheets>
+    <children>
+
+        <Pane layoutY="61.0" prefHeight="3.0" prefWidth="609.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+
+        <Text layoutX="26.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of publications">
+            <font>
+                <Font name="Bauhaus 93" size="47.0" />
+            </font>
+        </Text>
+        <TableView fx:id="table_pub" layoutX="173.0" layoutY="143.0" prefHeight="443.0" prefWidth="594.0">
+            <columns>
+                <TableColumn fx:id="col_user" prefWidth="87.0" style="-fx-alignement: center;" text="User" />
+                <TableColumn fx:id="col_pub" prefWidth="137.0" style="-fx-alignement: center;" text="Publication" />
+                <TableColumn fx:id="col_img" prefWidth="85.0" style="-fx-alignement: center;" text="Image" />
+                <TableColumn fx:id="col_react" prefWidth="77.0" style="-fx-alignement: center;" text="Reaction" />
+                <TableColumn fx:id="col_date" prefWidth="105.0" style="-fx-alignement: center;" text="Date" />
+                <TableColumn fx:id="editCol" prefWidth="105.0" style="-fx-alignement: center;" text="edit" />
+            </columns>
+        </TableView>
+        <HBox alignment="CENTER" layoutX="580.0" layoutY="14.714285850524902" />
+        <FontAwesomeIconView glyphName="CLOSE" layoutX="580.0" layoutY="21.0" onMouseClicked="#close" size="15" text="" wrappingWidth="26.985787391662598" AnchorPane.rightAnchor="-6.985787391662598" AnchorPane.topAnchor="7.0" />
+        <HBox alignment="CENTER_LEFT" layoutX="173.0" layoutY="75.0" prefHeight="67.0" prefWidth="200.0">
+            <children>
+                <FontAwesomeIconView fill="#2196f3" glyphName="PLUS_SQUARE" onMouseClicked="#getAddViewPublication" size="40" text="">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <FontAwesomeIconView fill="#00e676" glyphName="REFRESH" layoutX="10.0" layoutY="58.0" onMouseClicked="#refreshTable" size="40" text="">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </FontAwesomeIconView>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

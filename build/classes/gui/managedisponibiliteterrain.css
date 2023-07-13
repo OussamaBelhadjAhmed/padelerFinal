@@ -1,0 +1,39 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.btn:hover{
+    -fx-cursor:hand ;
+}
+.table-view {
+    -fx-background-color:#A6AEDE;
+    -fx-background-radius:14 14 0 0;
+    
+    }
+.table-view .column-header-background{
+        -fx-background-color: #A6AEDE;
+        -fx-background-radius:14;
+        -fx-background-insets: 0 0 10 0;
+       
+        
+        
+    }
+.table-view .column-header, .table-view .filler{
+        -fx-size:50px;
+        -fx-border-width: 0 0 10 0;
+        -fx-background-color:transparent;
+        
+    }
+    
+.table-view .column-header .label {
+        -fx-text-fill: white ;
+    }
+.button-style {
+    -fx-background-color: #ff0000; /* Couleur de fond */
+    -fx-text-fill: #ffffff; /* Couleur du texte */
+    -fx-font-size: 14px; /* Taille de la police */
+    /* Ajoutez d'autres propriétés CSS pour personnaliser davantage le bouton */
+}
